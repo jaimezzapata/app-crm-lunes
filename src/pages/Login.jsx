@@ -1,9 +1,11 @@
 import './Login.css'
 import Swal from 'sweetalert2'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 function Login() {
   const [getUsuario, setUsuario] = useState('')
   const [getPassword, setPassword] = useState('')
+  let redireccion = useNavigate()
 
   function iniciarSesion(e) {
     e.preventDefault()
@@ -24,6 +26,7 @@ function Login() {
         },
         willClose: () => {
           clearInterval(timerInterval);
+          redireccion('/home')
         }
       })
     } else {
