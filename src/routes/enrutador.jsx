@@ -17,5 +17,4 @@ export let enrutador = [
         path: '/contacto',
         element: <h1>Contacto</h1>
     }
-
 ]
