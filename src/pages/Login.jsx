@@ -1,7 +1,8 @@
 import './Login.css'
-import Swal from 'sweetalert2'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { alertaRedireccion, alertaError } from '../utils/funciones'
+
 function Login() {
   const [getUsuario, setUsuario] = useState('')
   const [getPassword, setPassword] = useState('')
@@ -10,31 +11,9 @@ function Login() {
   function iniciarSesion(e) {
     e.preventDefault()
     if (getUsuario === "admin" && getPassword === "admin") {
-      let timerInterval;
-      Swal.fire({
-        title: "Bivenido al sistema",
-        html: "Será redireccionado en <b></b> milisegundos.",
-        timer: 1500,
-        timerProgressBar: true,
-        icon: "success",
-        didOpen: () => {
-          Swal.showLoading();
-          const timer = Swal.getPopup().querySelector("b");
-          timerInterval = setInterval(() => {
-            timer.textContent = `${Swal.getTimerLeft()}`;
-          }, 100);
-        },
-        willClose: () => {
-          clearInterval(timerInterval);
-          redireccion('/home')
-        }
-      })
+      alertaRedireccion(redireccion, "/home", "Inicio de sesión...")
     } else {
-      Swal.fire({
-        title: "Error de credenciales",
-        icon: "error",
-        draggable: true
-      });
+      alertaError()
     }
   }
 

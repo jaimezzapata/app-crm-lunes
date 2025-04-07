@@ -1,4 +1,12 @@
+import { alertaRedireccion } from '../utils/funciones'
+import { useNavigate } from 'react-router-dom'
+
 const MenuLateral = () => {
+  let redireccion = useNavigate()
+  function cerrarSesion() {
+    alertaRedireccion(redireccion, "/", "Cerrando sesión...")
+  }
+
   return (
     <aside className="aplicacion__menu-lateral">
       <h1 className="aplicacion__menu-lateral-logo">Track <span className="aplicacion__menu-lateral-logo--resaltado">X</span></h1>
@@ -8,7 +16,7 @@ const MenuLateral = () => {
         <a className="aplicacion__menu-lateral-navegacion-item" href="">Inicio</a>
         <a className="aplicacion__menu-lateral-navegacion-item" href="">Gestión de envíos</a>
         <a className="aplicacion__menu-lateral-navegacion-item" href="">Gestión de clientes</a>
-        <button type='button' className="aplicacion__menu-lateral-navegacion-item">Cerrar sesión</button>
+        <button onClick={cerrarSesion} type='button' className="aplicacion__menu-lateral-navegacion-item">Cerrar sesión</button>
       </nav>
     </aside>
   )
