@@ -1,16 +1,20 @@
 import './Login.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { alertaRedireccion, alertaError } from '../utils/funciones'
+import { alertaRedireccion, alertaError, generarToken } from '../utils/funciones'
 
 function Login() {
   const [getUsuario, setUsuario] = useState('')
   const [getPassword, setPassword] = useState('')
   let redireccion = useNavigate()
 
+
+
   function iniciarSesion(e) {
     e.preventDefault()
     if (getUsuario === "admin" && getPassword === "admin") {
+      let tokenAcceso = generarToken()
+      localStorage.setItem("token", tokenAcceso)
       alertaRedireccion(redireccion, "/home", "Inicio de sesión...")
     } else {
       alertaError()

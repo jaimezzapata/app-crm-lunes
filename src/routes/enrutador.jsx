@@ -1,5 +1,7 @@
 import Login from '../pages/Login';
 import Home from '../Home'
+import RutaProtegida from '../components/RutaProtegida';
+
 export let enrutador = [
     {
         path: '/',
@@ -7,11 +9,11 @@ export let enrutador = [
     },
     {
         path: '/home',
-        element: <Home />
+        element: <RutaProtegida proteger={<Home />} />
     },
     {
         path: '/servicios',
-        element: <h1>Servicios</h1>
+        element: <RutaProtegida proteger={<h1>Servicios</h1>} />
     },
     {
         path: '/contacto',

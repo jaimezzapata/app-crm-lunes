@@ -31,6 +31,8 @@ export function alertaError() {
 export function alertaCorrecto() {
 
 }
-export function generarToken() {
 
+export function generarToken() {
+    let numeroAleatorio = "CB" + Math.random() * 1000 + "AB"
+    return numeroAleatorio
 }
