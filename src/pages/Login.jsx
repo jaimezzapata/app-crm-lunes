@@ -17,7 +17,6 @@ function Login() {
       .then(data => setUsuarios(data));
   }
 
-
   useEffect(() => {
     getUsuarios()
   }, [])
