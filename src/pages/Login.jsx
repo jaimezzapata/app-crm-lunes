@@ -1,18 +1,35 @@
 import './Login.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { alertaRedireccion, alertaError, generarToken } from '../utils/funciones'
+let urlUsuarios = "http://localhost:3000/usuarios"
 
 function Login() {
   const [getUsuario, setUsuario] = useState('')
   const [getPassword, setPassword] = useState('')
+  const [usuarios, setUsuarios] = useState([])
+
   let redireccion = useNavigate()
 
+  function getUsuarios() {
+    fetch(urlUsuarios)
+      .then(response => response.json())
+      .then(data => setUsuarios(data));
+  }
 
+
+  useEffect(() => {
+    getUsuarios()
+  }, [])
+
+  function buscarUsuario() {
+    let auth = usuarios.find((item) => item.usuario == getUsuario && item.contrasena == getPassword)
+    return auth
+  }
 
   function iniciarSesion(e) {
     e.preventDefault()
-    if (getUsuario === "admin" && getPassword === "admin") {
+    if (buscarUsuario()) {
       let tokenAcceso = generarToken()
       localStorage.setItem("token", tokenAcceso)
       alertaRedireccion(redireccion, "/home", "Inicio de sesión...")

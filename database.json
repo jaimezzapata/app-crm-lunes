@@ -1,0 +1,72 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Laura Martínez",
+      "documento": "1045678932",
+      "correo": "laura.martinez@example.com",
+      "contrasena": "laura123",
+      "usuario": "lauram"
+    },
+    {
+      "id": "2",
+      "nombre": "Carlos Pérez",
+      "documento": "1098456721",
+      "correo": "carlos.perez@example.com",
+      "contrasena": "carlosp456",
+      "usuario": "carlosp"
+    },
+    {
+      "id": "3",
+      "nombre": "Sofía Gómez",
+      "documento": "1012345678",
+      "correo": "sofia.gomez@example.com",
+      "contrasena": "sofiag789",
+      "usuario": "sofiag"
+    }
+  ],
+  "envios": [
+    {
+      "id": "1",
+      "usuarioId": 1,
+      "direccion": "Cra 45 #23-10, Medellín",
+      "fecha": "2025-04-07",
+      "estado": "Entregado"
+    },
+    {
+      "id": "2",
+      "usuarioId": 1,
+      "direccion": "Cl 12 #34-56, Bogotá",
+      "fecha": "2025-04-05",
+      "estado": "En camino"
+    },
+    {
+      "id": "3",
+      "usuarioId": 2,
+      "direccion": "Av 68 #45-20, Cali",
+      "fecha": "2025-04-06",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "4",
+      "usuarioId": 2,
+      "direccion": "Cl 80 #19-70, Medellín",
+      "fecha": "2025-04-03",
+      "estado": "Entregado"
+    },
+    {
+      "id": "5",
+      "usuarioId": 3,
+      "direccion": "Cra 10 #8-55, Barranquilla",
+      "fecha": "2025-04-02",
+      "estado": "Cancelado"
+    },
+    {
+      "id": "6",
+      "usuarioId": 3,
+      "direccion": "Cl 50 #30-10, Bucaramanga",
+      "fecha": "2025-04-01",
+      "estado": "En camino"
+    }
+  ]
+}

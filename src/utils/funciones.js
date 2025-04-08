@@ -33,6 +33,6 @@ export function alertaCorrecto() {
 }
 
 export function generarToken() {
-    let numeroAleatorio = "CB" + Math.random() * 1000 + "AB"
+    let numeroAleatorio = "CB" + Math.random() * 1000 + "ZZ" + Math.random() * 100 + "AB"
     return numeroAleatorio
 }
