@@ -1,7 +1,6 @@
 const ListadoEnvios = () => {
   return (
     <div className="cards">
-     
     </div>
   );
 };
