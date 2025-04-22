@@ -117,17 +117,3 @@
   font-size: 13px;
   color: white;
 }
-
-.form .switch .signup_tog {
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.container #signup_toggle {
-  display: none;
-}
-
-.container #signup_toggle:checked+.form {
-  transform: rotateY(-180deg);
-}

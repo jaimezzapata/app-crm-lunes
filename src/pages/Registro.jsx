@@ -1,14 +1,10 @@
 import "./Login.css";
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import {
-  alertaRedireccion,
-  alertaError,
-  generarToken,
-} from "../utils/funciones";
+import { alertaRedireccion, alertaError } from "../utils/funciones";
 let urlUsuarios = "http://localhost:3000/usuarios";
 
-function Login() {
+function Registro() {
   const [getUsuario, setUsuario] = useState("");
   const [getPassword, setPassword] = useState("");
   const [usuarios, setUsuarios] = useState([]);
@@ -31,41 +27,29 @@ function Login() {
     return auth;
   }
 
-  function iniciarSesion(e) {
+  function registrarUsuario(e) {
     e.preventDefault();
     if (buscarUsuario()) {
-      let tokenAcceso = generarToken();
-      localStorage.setItem("token", tokenAcceso);
-      localStorage.setItem("usuario", JSON.stringify(buscarUsuario()));
       alertaRedireccion(redireccion, "/home", "Inicio de sesión...");
     } else {
       alertaError();
     }
   }
-
   return (
     <div className="container">
       <input id="signup_toggle" type="checkbox" />
-      <form onSubmit={iniciarSesion} className="form">
+      <form onSubmit={registrarUsuario} className="form">
         <div className="form_front">
-          <div className="form_details">Login</div>
-          <input
-            onChange={(e) => setUsuario(e.target.value)}
-            type="text"
-            className="input"
-            placeholder="Username"
-          />
-          <input
-            onChange={(e) => setPassword(e.target.value)}
-            type="text"
-            className="input"
-            placeholder="Password"
-          />
-          <button className="btn">Login</button>
+          <div className="form_details">Registro</div>
+          <input type="text" className="input" placeholder="Firstname" />
+          <input type="text" className="input" placeholder="Username" />
+          <input type="text" className="input" placeholder="Password" />
+          <input type="text" className="input" placeholder="Confirm Password" />
+          <button className="btn">Signup</button>
           <span className="switch">
-            ¿No tiene una cuenta?
-            <Link to="/registro" className="signup_tog">
-              Registrarse
+            ¿Ya tiene una cuenta?
+            <Link to="/" className="signup_tog">
+              Iniciar Sesión
             </Link>
           </span>
         </div>
@@ -74,4 +58,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Registro;
