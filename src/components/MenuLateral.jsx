@@ -1,5 +1,5 @@
 import { alertaRedireccion } from "../utils/funciones";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const MenuLateral = () => {
   let redireccion = useNavigate();
@@ -26,9 +26,9 @@ const MenuLateral = () => {
         <a className="aplicacion__menu-lateral-navegacion-item" href="">
           Inicio
         </a>
-        <a className="aplicacion__menu-lateral-navegacion-item" href="">
+        <Link className="aplicacion__menu-lateral-navegacion-item" to="envios">
           Gestión de envíos
-        </a>
+        </Link>
         <a className="aplicacion__menu-lateral-navegacion-item" href="">
           Gestión de clientes
         </a>

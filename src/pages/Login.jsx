@@ -40,7 +40,7 @@ function Login() {
       localStorage.setItem("usuario", JSON.stringify(buscarUsuario()));
       alertaRedireccion(redireccion, "/home", "Inicio de sesión...");
     } else {
-      alertaError();
+      alertaError("Error", "Usuario y/o contraseña incorrecto", "error");
     }
   }
 

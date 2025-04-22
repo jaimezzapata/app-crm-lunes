@@ -2,6 +2,7 @@ import Login from "../pages/Login";
 import Home from "../Home";
 import RutaProtegida from "../components/RutaProtegida";
 import Registro from "../pages/Registro";
+import ListadoEnvios from "../pages/ListadoEnvios";
 
 export let enrutador = [
   {
@@ -15,5 +16,11 @@ export let enrutador = [
   {
     path: "/home",
     element: <RutaProtegida proteger={<Home />} />,
+    children: [
+      {
+        path: "envios",
+        element: <ListadoEnvios />,
+      },
+    ],
   },
 ];
