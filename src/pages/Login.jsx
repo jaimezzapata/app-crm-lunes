@@ -5,6 +5,7 @@ import {
   alertaRedireccion,
   alertaError,
   generarToken,
+  generarId,
 } from "../utils/funciones";
 let urlUsuarios = "http://localhost:3000/usuarios";
 

@@ -23,6 +23,30 @@
       "correo": "sofia.gomez@example.com",
       "contrasena": "sofiag789",
       "usuario": "sofiag"
+    },
+    {
+      "id": "9217",
+      "nombre": "Jaime Zapata",
+      "documento": "1020304050",
+      "correo": "correo@correo.com",
+      "contrasena": "1234567",
+      "usuario": "jaimez"
+    },
+    {
+      "id": "ad15",
+      "nombre": "Jaime Zapata",
+      "documento": "1020304050",
+      "correo": "correojaime@correo.com",
+      "contrasena": "234132",
+      "usuario": "jaime"
+    },
+    {
+      "id": "hwdidpp8uv",
+      "nombre": "Marcela Vega",
+      "documento": "20304050",
+      "correo": "marcela@correo.com",
+      "contrasena": "Contraseña",
+      "usuario": "marcela"
     }
   ],
   "envios": [
