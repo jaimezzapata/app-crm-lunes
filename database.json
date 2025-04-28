@@ -84,13 +84,6 @@
       "direccion": "Cra 10 #8-55, Barranquilla",
       "fecha": "2025-04-02",
       "estado": "Cancelado"
-    },
-    {
-      "id": "6",
-      "usuarioId": 3,
-      "direccion": "Cl 50 #30-10, Bucaramanga",
-      "fecha": "2025-04-01",
-      "estado": "En camino"
     }
   ]
 }
