@@ -180,6 +180,7 @@
   /* align-items: center; */
   flex-direction: column;
   background-color: white;
+  padding: 10px;
 }
 
 .card::after,
@@ -270,16 +271,19 @@
   align-items: center;
   width: 100%;
   height: 30px;
+  margin-bottom: 10px;
 }
 
 .card__buttons button:first-child,
 .card__buttons button:last-child {
   height: 30px;
+  width: 40%;
 }
 
 .card__buttons button:first-child {
   background-color: #ca9d66;
 }
+
 .card__buttons button:last-child {
   background-color: white;
 }
