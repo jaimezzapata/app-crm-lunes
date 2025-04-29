@@ -29,7 +29,29 @@ export function alertaError(titulo, mensaje, icono) {
     draggable: true,
   });
 }
-export function alertaCorrecto() {}
+export function alertaCorrecto(titulo, mensaje, icono, id) {
+  let urlEnvios = "http://localhost:3000/envios/";
+  Swal.fire({
+    title: titulo,
+    text: mensaje,
+    icon: icono,
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, Eliminar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      fetch(urlEnvios + id, {
+        method: "DELETE",
+      });
+      Swal.fire({
+        title: "Eliminado",
+        text: "El envío fué eliminado correctamente",
+        icon: "success",
+      });
+    }
+  });
+}
 
 export function generarToken() {
   let numeroAleatorio =
@@ -37,6 +59,6 @@ export function generarToken() {
   return numeroAleatorio;
 }
 
-export function generarId(){
-    return Math.random().toString(36).substring(2)
+export function generarId() {
+  return Math.random().toString(36).substring(2);
 }

@@ -65,24 +65,10 @@
       "estado": "Pendiente de pago"
     },
     {
-      "id": "3",
-      "usuarioId": "1",
-      "direccion": "Cra 29 #44-28, Medellín",
-      "fecha": "2024-10-14",
-      "estado": "Entregado"
-    },
-    {
       "id": "4",
       "usuarioId": "1",
       "direccion": "Cra 59 #23-5, Medellín",
       "fecha": "2025-03-14",
-      "estado": "Entregado"
-    },
-    {
-      "id": "5",
-      "usuarioId": "1",
-      "direccion": "Cra 26 #4-14, Medellín",
-      "fecha": "2024-10-31",
       "estado": "Entregado"
     },
     {
