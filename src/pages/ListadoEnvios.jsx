@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { alertaCorrecto } from "../utils/funciones";
+import { Link } from "react-router-dom";
 let urlEnvios = "http://localhost:3000/envios/";
 
 const ListadoEnvios = () => {
@@ -30,7 +31,8 @@ const ListadoEnvios = () => {
         "¿Esta seguro de eliminar?",
         "Esta acción no se puede revertr",
         "warning",
-        id
+        id,
+        getEnvios
       );
     }
   }
@@ -46,7 +48,9 @@ const ListadoEnvios = () => {
             <button onClick={() => eliminarEnvio(envio.id)} type="button">
               Eliminar
             </button>
-            <button type="button">Editar</button>
+            <Link to={"/home/editar-envio/" + envio.id} type="button">
+              Editar
+            </Link>
           </div>
         </div>
       ))}

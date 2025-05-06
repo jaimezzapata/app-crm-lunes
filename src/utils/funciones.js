@@ -29,7 +29,7 @@ export function alertaError(titulo, mensaje, icono) {
     draggable: true,
   });
 }
-export function alertaCorrecto(titulo, mensaje, icono, id) {
+export function alertaCorrecto(titulo, mensaje, icono, id, getEnvios) {
   let urlEnvios = "http://localhost:3000/envios/";
   Swal.fire({
     title: titulo,
@@ -43,6 +43,8 @@ export function alertaCorrecto(titulo, mensaje, icono, id) {
     if (result.isConfirmed) {
       fetch(urlEnvios + id, {
         method: "DELETE",
+      }).then(() => {
+        getEnvios();
       });
       Swal.fire({
         title: "Eliminado",

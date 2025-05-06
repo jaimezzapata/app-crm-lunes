@@ -51,46 +51,11 @@
   ],
   "envios": [
     {
-      "id": "1",
-      "usuarioId": "1",
-      "direccion": "Cra 88 #94-49, Medellín",
-      "fecha": "2025-04-12",
-      "estado": "Pendiente de pago"
-    },
-    {
-      "id": "2",
-      "usuarioId": "1",
-      "direccion": "Cra 53 #66-63, Medellín",
-      "fecha": "2025-02-20",
-      "estado": "Pendiente de pago"
-    },
-    {
-      "id": "4",
-      "usuarioId": "1",
-      "direccion": "Cra 59 #23-5, Medellín",
-      "fecha": "2025-03-14",
-      "estado": "Entregado"
-    },
-    {
-      "id": "6",
-      "usuarioId": "2",
-      "direccion": "Cra 73 #49-77, Medellín",
-      "fecha": "2024-05-10",
-      "estado": "Cancelado"
-    },
-    {
-      "id": "7",
-      "usuarioId": "2",
-      "direccion": "Cra 13 #39-67, Medellín",
-      "fecha": "2025-04-20",
-      "estado": "Pendiente de pago"
-    },
-    {
-      "id": "8",
-      "usuarioId": "2",
       "direccion": "Cra 15 #29-89, Medellín",
-      "fecha": "2024-10-12",
-      "estado": "Cancelado"
+      "fecha": "2024-10-23",
+      "estado": "Pendiente",
+      "usuarioId": "2",
+      "id": "8"
     },
     {
       "id": "9",
@@ -100,11 +65,11 @@
       "estado": "Pendiente de pago"
     },
     {
-      "id": "10",
-      "usuarioId": "2",
       "direccion": "Cra 68 #8-52, Medellín",
       "fecha": "2024-11-01",
-      "estado": "Cancelado"
+      "estado": "En Proceso",
+      "id": "10",
+      "usuarioId": "2"
     },
     {
       "id": "11",
@@ -214,23 +179,23 @@
     {
       "id": "26",
       "usuarioId": "hwdidpp8uv",
-      "direccion": "Cra 49 #16-4, Medellín",
-      "fecha": "2024-12-06",
-      "estado": "En proceso"
+      "direccion": "Av 26 # 50 - 400, Bello",
+      "fecha": "2025-05-05",
+      "estado": "Cancelado"
     },
     {
       "id": "27",
       "usuarioId": "hwdidpp8uv",
       "direccion": "Cra 28 #98-35, Medellín",
       "fecha": "2024-06-21",
-      "estado": "Pendiente de pago"
+      "estado": "Pendiente"
     },
     {
       "id": "28",
       "usuarioId": "hwdidpp8uv",
-      "direccion": "Cra 40 #14-40, Medellín",
+      "direccion": "Cra 40 #14-40, Cali",
       "fecha": "2024-12-17",
-      "estado": "En proceso"
+      "estado": "Enviado"
     },
     {
       "id": "29",
@@ -240,11 +205,10 @@
       "estado": "Pendiente de pago"
     },
     {
-      "id": "30",
-      "usuarioId": "hwdidpp8uv",
-      "direccion": "Cra 12 #54-75, Medellín",
-      "fecha": "2025-02-06",
-      "estado": "En proceso"
+      "direccion": "Cra 12 #54-75, Bogotá",
+      "fecha": "2025-05-05",
+      "estado": "Cancelado",
+      "id": "30"
     }
   ]
 }
